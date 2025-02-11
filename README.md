@@ -1,6 +1,5 @@
 # ECM1410-Workshop-05-Instructions
 
-# ECM1410-Workshop03-Instructions
 
 ## Part A. Arrays, Pass By Reference and String Formatting
 
