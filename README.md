@@ -67,7 +67,7 @@ original values: [1, 8, 3, 5]
 
 **TASK 1.2**
 
-We want to develop our program and manually code an algorithm that uses an `ArrayList` to create a filtered copy of the list named `uniqueVals` that removes any duplicate values with the desired output as shown in the example below:
+We want to develop our program and manually code an algorithm that creates a filtered copy of the list named `uniqueVals` that removes any duplicate values with the desired output as shown in the example below:
 
 ```bash
 java CopyArrayApp 1 8 3 3 5 1 9
@@ -78,17 +78,74 @@ original values: [1, 8, 3, 3, 5, 1, 9]
 unique values: [1, 8, 3, 5, 9]
 ```
 
-**Hints** 
+One problem we have with implementing this is that we cannot create an output array and dynamically change its size to grow the array as we copy them in.
 
- - we need to add `import java.util.ArrayList;` to use `ArrayList` objects
+In theory we could get around this by: first calculating the number of unique items; then allocating an array of the right size; and finally selecting and copying in the unique items.
 
- - `ArrayList<Integer> uniqueVals = new ArrayList<>();` will create a new `ArrayList`
+However we can avoid this by making use of the `ArrayList` class. This is a more flexible class that implements data array storage, that allows the addition/removal of elements after it has been created. This flexibility will come at a potential performance cost (because the fixed allocation of the basic array type can be more efficiently managed in memory).
 
- - `ArrayList` objects have a `toString` method so you can print the result using code as shown below:
+To use an `ArrayList` you will need to add the following import at the top of your file:
 
-``` 
-System.out.println("unique values: " + uniqueVals);
+```java
+import java.util.ArrayList;
 ```
+
+We can create an `ArrayList` using code like:
+
+```java
+ArrayList<Integer> uniqueVals = new ArrayList<>();
+```
+
+The methods to work with `ArrayList` objects differ from the basic java arrays, e.g. consider the following commands for an array:
+
+```java
+// create an int array with 10 values
+int[] x = new int[10];
+
+// set array values
+x[0] = 5;
+x[1] = 8;
+x[2] = 7; 
+
+
+// n stores 10
+n = x.length; 
+
+// extend array to add extra value 9
+// NOT ALLOWED FOR ARRAY!!
+
+// displays array values and length
+System.out.println(Arrays.toString(x));
+System.out.println(n); 
+
+```
+For an `ArrayList` these become:
+
+```java
+// create an int ArrayList initialised with preallocated space to store 3 values
+// note we could use ArrayList<>() to initialise an empty array 
+ArrayList<Integer> x = new ArrayList<>(3); 
+
+// set array values
+x.set(0) = 5;
+x.set(1) = 8;
+x.set(2) = 7; 
+
+// extend array to add extra value 9
+x.add(9)
+
+// read the array length 
+n = x.size();
+
+// displays array values and length
+System.out.println(x); // ArrayList class has `toString()` method inbuilt
+System.out.println(n); 
+```
+
+**Using the above commands edit your code to implement the functionality to display the created array of unique values.**
+
+Hint: The `ArrayList` class has a `.contains()` method which may be useful when checking for unique values.
+
 
 **IMPORTANT** 
 
@@ -180,9 +237,9 @@ As this workshop is assessed please ensure that:
 
  i. you leave the `PassByValueApp` code in the state it should be after completion of **TASK 2.2**.
 
- ii. you successfully commit and push your `PassByValueApp.java` file to the GitHub classroom repository where they can be accessed by the teaching staff. 
+ ii. you successfully commit and push your `StringFormatApp.java` file to the GitHub classroom repository where they can be accessed by the teaching staff. 
 
-### 3. `StringFormatApp.java`: String formatting
+### `StringFormatApp.java`: String formatting
 
 For printing on the screen, Java offers the `System.out.printf()` method
 which allows control of how literals can be displayed as part of the program output.
