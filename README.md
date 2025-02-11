@@ -32,7 +32,13 @@ java CopyArrayApp 1 2 3 4
 Now before the loop runs, add in the code below, that creates integer array `myVals`. Next edit the code so that instead of printing each value, it stores the loaded values into this array.
 
 ```
+// to create a new array of ints
 int[] myVals = new int[nVals];
+```
+
+```
+// to allocate a value into the created array at index i
+myVals[i] = ...
 ```
 
 We can make use of a utility from `java.util.Arrays` to display the result. To do this add the following line to the top of your file:
