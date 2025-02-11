@@ -142,7 +142,16 @@ System.out.println(x); // ArrayList class has `toString()` method inbuilt
 System.out.println(n); 
 ```
 
-**Using the above commands edit your code to implement the functionality to display the created array of unique values.**
+Using the above commands edit your code to implement the functionality to display the created array of unique values, i.e. the desired output will be:
+
+```bash
+java CopyArrayApp 1 8 3 3 5 1 9
+```
+
+```
+original values: [1, 8, 3, 3, 5, 1, 9]
+unique values: [1, 8, 3, 5, 9]
+```
 
 Hint: The `ArrayList` class has a `.contains()` method which may be useful when checking for unique values.
 
