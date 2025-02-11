@@ -11,7 +11,7 @@ The following code shows an example of a program that can read in a list of inte
 public class CopyArrayApp{
   public static void main(String[] args) {
     int nVals = args.length;
-    for (int i = 0; i < nValues; i++) {
+    for (int i = 0; i < nVals; i++) {
       int item = Integer.parseInt(args[i]);
       System.out.println(item);
     }
