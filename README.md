@@ -182,7 +182,7 @@ As this workshop is assessed please ensure that:
 
  ii. you successfully commit and push your `PassByValueApp.java` file to the GitHub classroom repository where they can be accessed by the teaching staff. 
 
-### `StringFormatApp.java`: String formatting
+### 3. `StringFormatApp.java`: String formatting
 
 For printing on the screen, Java offers the `System.out.printf()` method
 which allows control of how literals can be displayed as part of the program output.
