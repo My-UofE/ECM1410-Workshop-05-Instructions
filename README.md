@@ -19,7 +19,9 @@ public class CopyArrayApp{
 }
 ```
 
-Read through the code to check you can understand it. Run the code in the terminal using the command below, and check the output is in line with your expectations. If there is anything you do not understand ask one of the teaching staff.
+Read through the code to check you can understand it. 
+
+Create the file in your workspace then run the code in the terminal using the command below, and check the output is in line with your expectations. If there is anything you do not understand ask one of the teaching staff.
 
 ```
 java CopyArrayApp 1 2 3 4
