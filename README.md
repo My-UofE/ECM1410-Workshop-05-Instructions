@@ -549,8 +549,8 @@ In the file `AuthorApp.java` use the code below within the `main` function so th
 ```java
 Author osman = new Author("Richard Osman", "noone@nowhere.com", 'm');
 
-System.out.println(ahTeck); // Test toString()
-ahTeck.setEmail("osman@murderclub.com"); // Test setter
+System.out.println(osman); // Test toString()
+osman.setEmail("osman@murderclub.com"); // Test setter
 System.out.println("name is: " + osman.getName()); // Test getter
 System.out.println("email is: " + osman.getEmail()); // Test getter
 System.out.println("gender is: " + osman.getGender()); // Test getter
