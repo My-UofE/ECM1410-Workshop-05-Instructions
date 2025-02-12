@@ -648,12 +648,19 @@ You can leave the author email addresses empty, and the gender codes as `'u'` i.
 **Hint**
 
 ```java
+// create the stocklist as an ArrayList to store the books
 ArrayList<Book> stocklist = new ArrayList<>();
-// create book 1, only one element in the 'authors' array
-Author [] authors = {new Author("Robert Nisbet","",'u')};
-Book book = new Book("Data Mining Handbook",authors,27.95,10);
-// add book 1 into the ArrayList object
-stocklist.add(book);
+
+// to add book 1
+// first create necessary 'authors' array
+Author [] authors1 = {new Author("Robert Nisbet", "", 'u')};
+
+// we can then create book1
+Book book1 = new Book("Data Mining Handbook", authors1, 27.95, 10);
+
+// finally add book 1 into the ArrayList
+stocklist.add(book1);
+
 // create more books, and add them into the array
 ...
 ```
