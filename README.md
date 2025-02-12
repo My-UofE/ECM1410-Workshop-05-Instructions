@@ -587,11 +587,12 @@ The diamond shape between the two classes means an aggregation relationship, i.e
 
 Write the `Book` class (which uses the `Author` class written earlier). 
 
-Verify your class is correct by testing all the public methods of `Book` class in a program `BookApp.java`.
+In the same way you wrote a `AuthorApp.java` program to test the public methods of the `Author` app, 
+create a file `BookApp.java` to test the public methods you have constructed for the `Book` class.
 
-**Hints**
+**Hint**
 
-Note that you have to construct an array of Author instances before you can construct an instance of Book, e.g.
+Note that you have to construct an array of `Author` instances before you can construct an instance of `Book`, e.g.
 
 ```java
  // Declare and allocate an array of Authors
@@ -692,6 +693,6 @@ Demonstrate your code has been successful by displaying the updated stocklist ar
 
 As this workshop is assessed please ensure that:
 
- i. the files `Author.java`, `AuthorApp.java`, `Book.java`, `BookApp.java` and `BookShop.java` programs have been written in exact accordance with the instructions and produce output *exactly* in line with the format above.
+ i. the files `Author.java`, `AuthorApp.java`, `Book.java`, `BookApp.java` and `BookShopApp.java` programs have been written in exact accordance with the instructions and produce output *exactly* in line with the format above.
 
  ii. you successfully commit and push these files to the GitHub classroom repository where they can be accessed by the teaching staff. 
