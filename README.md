@@ -669,9 +669,9 @@ Write code that can loop over the books in the `stocklist` and print each book i
 | Objects First with Java | David Barnes, Michael Kolling |  29.50 | 004 |
 ```
 
-Hint. The above table uses field sizes of 23, 28, 6 and 3 which you may hard code.
+Hint. The above table uses field sizes of 23, 28, 6 and 3 and do not need to be calculated.
 
-**CHALLENGE** When you finish the other tasks come back and make this table dynamically adapt its column widths to accomodate the entries so they would fit the content exactly i.e. width would be the length of the longest entry plus a space at each side (optional, but extra credit may be given).
+**CHALLENGE** When you finish the other tasks come back and make this table dynamically adapt its column widths to accomodate the entries so they would fit the content exactly i.e. width would be the length of the longest entry plus a space at each side. (optional - not for credit).
 
 **TASK 4.4**
 
