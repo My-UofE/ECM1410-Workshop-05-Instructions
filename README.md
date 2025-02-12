@@ -669,7 +669,9 @@ Write code that can loop over the books in the `stocklist` and print each book i
 | Objects First with Java | David Barnes, Michael Kolling |  29.50 | 004 |
 ```
 
-**CHALLENGE** can you make the table dynamically adapt its column widths to accomodate the entries in the `ArrayList` (optional)?
+Hint. The above table uses field sizes of 23, 28, 6 and 3 which you may hard code.
+
+**CHALLENGE** When you finish the other tasks come back and make this table dynamically adapt its column widths to accomodate the entries so they would fit the content exactly i.e. width would be the length of the longest entry plus a space at each side (optional, but extra credit may be given).
 
 **TASK 4.4**
 
@@ -679,7 +681,7 @@ Add the following line of code after displaying the `ArrayList` as above to set 
 
 ```java
 String searchFor = "making software";
-System.out.println("Search for term(s) '" + searchFor + "' in title...");
+System.out.println("Search for title:'" + searchFor + "' in title...");
 ```
 
 Add code that searches the array for books with a title that matches the search string. If the search term is found it should print the details of the book (using the `toString` method), and decrease the stock quantity of that book by 1.
@@ -702,6 +704,15 @@ System.out.println("Removing all books with term '" + removeAll + "' in title...
 ```
 
 Next add code that searches the stock level array for books containing this term in the title. It should print the stock level rows for the books identified (so they can be removed) and delete them from the stock list. 
+
+Hint. In addition to the `.equals()` method the `String` class has a `.contains()` method which can be used to determine if a string contains a given substring e.g.
+
+```java
+// try in jshell
+String pets="cat dog mouse";
+pets.contains("dog"); // true
+pets.contains("lion"); // false
+```
 
 After this your code should summarise the action taken by printing the line:
 
