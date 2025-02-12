@@ -483,7 +483,7 @@ Make the following changes to the output format (so we could collate the lines o
  
  - the height field is 4 characters wide and always given to 2 decimal places (right justified)
 
-(see the diagram below for format and some example output lines) 
+(see the diagram below for format and how the output line will look for different input data) 
 
 ```
 fields and widths:
@@ -495,7 +495,7 @@ name: Jonathan             Age: 102 Height: 1.75m
 name: Zebedee              Age:   7 Height: 0.82m
 ```
 
-Note how the fixed field widths mean that when collated the outpuat can be combined so the data is aligned in columns.
+Note how the fixed field widths mean that when collated the output can be combined so the data is aligned in columns (although the current program is to collect one students data only, in general we might write programs to deal with and display many records).
 
 **TASK 3.3**
 
