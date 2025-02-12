@@ -246,7 +246,7 @@ As this workshop is assessed please ensure that:
 
  i. you leave the `PassByValueApp` code in the state it should be after completion of **TASK 2.2**.
 
- ii. you successfully commit and push your `StringFormatApp.java` file to the GitHub classroom repository where they can be accessed by the teaching staff. 
+ ii. you successfully commit and push your `PassByValueApp.java` file to the GitHub classroom repository where they can be accessed by the teaching staff. 
 
 ### `StringFormatApp.java`: String formatting
 
