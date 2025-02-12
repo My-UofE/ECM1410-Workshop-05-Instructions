@@ -606,6 +606,10 @@ System.out.println(javaDummy); // toString()
 
 When displaying the author details for a book you need to loop over the author array, and for example build up a string from each entry plus a `comma` to separate them. 
 
+If you get stuck you can expand the code example below for a hint on how to do this.
+
+<details>
+  <summary>code example</summary>
 The example code below provides a possible code structure that can be adapted. It takes an array of values e.g. 2,4,6,8 and produces a string like `"2-4-6-8"`: 
 
 ```
@@ -619,6 +623,8 @@ for (int i = 0; i < values.length; i++) {
 }
 System.out.println(valuesString);
 ```
+
+</details>
 
 ### `BookShopApp.java`
 
