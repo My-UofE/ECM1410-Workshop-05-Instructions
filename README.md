@@ -634,6 +634,8 @@ Create a program `BookShopApp.java` with a main function that will complete the 
 
 First create a book array which contains the following books, using the `ArrayList` so that we may dynamically add and remove books from the list.
 
+You can leave the author email addresses empty, and the gender codes as `'u'` i.e. unspecified.
+
 | Name  | Authors  | Price GBP | Stock Level | 
 |-------------------------|-------------------------------|------:|---:|
 | Data Mining Handbook    | Robert Nisbet                 | 27.95 | 10 |
@@ -648,7 +650,7 @@ First create a book array which contains the following books, using the `ArrayLi
 ```java
 ArrayList<Book> stocklist = new ArrayList<>();
 // create book 1, only one element in the 'authors' array
-Author [] authors = {new Author("Robert Nisbet","",'m')};
+Author [] authors = {new Author("Robert Nisbet","",'u')};
 Book book = new Book("Data Mining Handbook",authors,27.95,10);
 // add book 1 into the ArrayList object
 stocklist.add(book);
