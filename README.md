@@ -600,8 +600,24 @@ Author[] authors = new Author[2];
 authors[0] = new Author("Pip Jones", "pjones@java.org", 'u');
 authors[1] = new Author("Bessie Carter", "b.carter@java.org", 'f');
 // Declare and allocate a Book instance
-Book javaDummies = new Book("Java for Dummies", authors, 19.99, 99);
+Book javaDummy = new Book("Java for Dummies", authors, 19.99, 99);
 System.out.println(javaDummy); // toString()
+```
+
+When displaying the author details for a book you need to loop over the author array, and for example build up a string from each entry plus a `comma` to separate them. 
+
+The example code below provides a possible code structure that can be adapted. It takes an array of values e.g. 2,4,6,8 and produces a string like `"2-4-6-8"`: 
+
+```
+int[] values = {2, 4, 6, 8, 10};
+String valuesString="";
+boolean first=true;
+for (int i = 0; i < values.length; i++) {
+  if (!first) valuesString += "-";
+  valuesString += String.valueOf(values[i]);
+  first=false;
+}
+System.out.println(valuesString);
 ```
 
 ### `BookShopApp.java`
