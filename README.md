@@ -483,6 +483,20 @@ Make the following changes to the output format (so we could collate the lines o
  
  - the height field is 4 characters wide and always given to 2 decimal places (right justified)
 
+(see the diagram below for format and some example output lines) 
+
+```
+fields and widths:
+          
+      _________20_________      _3_         __4_
+
+name: Alice                Age:  21 Height: 1.64m
+name: Jonathan             Age: 102 Height: 1.75m
+name: Zebedee              Age:   7 Height: 0.82m
+```
+
+Note how the fixed field widths mean that when collated the outpuat can be combined so the data is aligned in columns.
+
 **TASK 3.3**
 
 In space due to the absence of gravity your vertebra expand such that your height increases by 2.3%. 
