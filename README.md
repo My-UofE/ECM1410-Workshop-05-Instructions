@@ -665,7 +665,21 @@ stocklist.add(book1);
 ...
 ```
 
-Write code that can loop over the books in the `stocklist` and print each book in the array to recreate the table rows as below (using  3 digits, zero-padded to store the stock level quantity), using `|` to delimit the columns.
+**NEW** (This line was added on 12th Feb to ensure we test the `Book.toString()` method).
+
+When you have added code to enter all the books run the following code to loop over the items and print each book.
+
+```
+for (Book b : stocklist) {
+  System.out.println(b);
+}
+```
+
+Next we will work to display the stocklist in a more readable "table" format. 
+
+Leave the above code in your file, but add extra code below. This should loop over the books in the `stocklist` and print information about each book to recreate the table rows as below (using  3 digits, zero-padded to store the stock level quantity), using `|` to delimit the columns.
+
+Note the table uses field sizes of 23, 28, 6 and 3 and do not need to be calculated.
 
 ```
 | Data Mining Handbook    | Robert Nisbet                 |  27.95 | 010 |
@@ -675,8 +689,6 @@ Write code that can loop over the books in the `stocklist` and print each book i
 | OO Design Using Java    | James Nino, Frederick Hosch   |  30.00 | 006 |
 | Objects First with Java | David Barnes, Michael Kolling |  29.50 | 004 |
 ```
-
-Hint. The above table uses field sizes of 23, 28, 6 and 3 and do not need to be calculated.
 
 **CHALLENGE** When you finish the other tasks come back and try to make this table dynamically adapt its column widths to accomodate the entries so they would fit the content exactly i.e. width would be the length of the longest entry plus a space at each side. (optional - not for credit).
 
