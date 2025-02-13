@@ -107,9 +107,10 @@ for student in ./tests/*.out; do
     ref="${ref%.*}"
     var="$(diff -B -y --suppress-common-lines $student <(echo "${!ref}") | wc -l)"
     if [[ $var -eq 0 ]]; then
-        echo "$student: PASS"
+        echo ${ref:3}: PASS
     else
-        echo "$student: FAIL"
+        echo ${ref:3}: FAIL
+        echo DIFFERENCES:
         diff -B $student <(echo "${!ref}")
 
     fi
