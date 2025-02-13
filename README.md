@@ -1,5 +1,20 @@
 # ECM1410-Workshop-05-Instructions
 
+**UPDATE 12th Feb** 
+
+You can add a test script to your repository by running the following command in your CodeSpace terminal:
+
+```bash
+curl https://raw.githubusercontent.com/My-UofE/ECM1410-Workshop-05-Instructions/refs/heads/main/test_all.sh -o ./tests/test_all.sh
+```
+
+Once present you can run the test from your working directory using the terminal command:
+
+```bash
+bash ./tests/test_all.sh
+```
+
+
 
 ## Part A. Arrays, Pass By Reference and String Formatting
 
