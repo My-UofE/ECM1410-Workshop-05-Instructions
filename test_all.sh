@@ -1,31 +1,5 @@
 #!/bin/bash
 
-########
-#
-# test_all.sh
-#
-# SCRIPT TO CHECK YOUR ECM1410 WORKSHOP 05 SUBMISSION
-#
-# Please download and copy this file into the tests directory
-#
-# to test please run the following command in the CodeSpace terminal
-#
-# bash ./tests/test_all.sh
-#
-# NOTE: The actual test script will include some additional checks
-#       but these should test most of the functionality in your 
-#       submitted work works as expected and matches the expected output
-#       Please run on your code and fix any mismatches.
-#
-# If you think there is a problem with the test please email
-# p.lewis2@exeter.ac.uk 
-# and please check the module announcements in your email/ELE 
-# in case bug fixes or notable changes to the instructions are made
-#           
-########
-
-
-
 read -r -d '' t01CopyArrayApp << EOM
 original values: [1, 1, 2, 3, 4, 4]
 unique values: [1, 2, 3, 4]
@@ -33,7 +7,7 @@ EOM
 
 read -r -d '' t02PassByValueApp << EOM
 After the method: red
-       5
+5
 EOM
 
 read -r -d '' t03StringFormatApp << EOM
@@ -84,12 +58,48 @@ for java_file in *App.java; do
 done
 
 java CopyArrayApp 1 1 2 3 4 4 > ./tests/t01CopyArrayApp.out
+if [[ $? -eq 0 ]]; then
+    echo "CopyArrayApp: RAN"
+else
+    echo "CopyArrayApp: FAILED_TO_RUN"
+    t01CopyArrayApp=FAILED_TO_RUN
+fi
+
 java PassByValueApp | tail -n 1 > ./tests/t02PassByValueApp.out
-java PassByValueApp | wc -l >> ./tests/t02PassByValueApp.out
+java PassByValueApp | wc -l | tr -d '[:blank:]'  >> ./tests/t02PassByValueApp.out
+if [[ $? -eq 0 ]]; then
+    echo "PassByValueApp: RAN"
+else
+    echo "PassByValueApp: FAILED_TO_RUN"
+    t02PassByValueApp=FAILED_TO_RUN
+fi
+
+
+
 java StringFormatApp Oscar 22 1.52 > ./tests/t03StringFormatApp.out
+if [[ $? -eq 0 ]]; then
+    echo "StringFormatApp: RAN"
+else
+    echo "StringFormatApp: FAILED_TO_RUN"
+    t03StringFormatApp=FAILED_TO_RUN
+fi
+
 java AuthorApp > ./tests/t04AuthorApp.out
+if [[ $? -eq 0 ]]; then
+    echo "AuthorApp: RAN"
+else
+    echo "AuthorApp: FAILED_TO_RUN"
+    t04AuthorApp=FAILED_TO_RUN
+fi
+
 # java BookApp > ./tests/05_BookApp.out
 java BookShopApp > ./tests/t06BookShopApp.out
+if [[ $? -eq 0 ]]; then
+    echo "BookShopApp: RAN"
+else
+    echo "BookShopApp: FAILED_TO_RUN"
+    t06BookShopApp=FAILED_TO_RUN
+fi
 
 for student in ./tests/*.out; do
     #t01CopyArrayApp=$(<./tests/t01CopyArrayApp.out)
