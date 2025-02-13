@@ -14,6 +14,7 @@ Once present you can run the test from your working directory using the terminal
 bash ./tests/test_all.sh
 ```
 
+Note there is no test 5, because the contents of file 5: `BookApp.java` was unspecified. Therefore you should check the behaviour of your `Book` class carefully and in particular the `.getAuthorNames()` method which is not checked by the test script.
 
 
 ## Part A. Arrays, Pass By Reference and String Formatting
@@ -659,6 +660,8 @@ You can leave the author email addresses empty, and the gender codes as `'u'` i.
 | Making Software         | Andy Oram                     | 35.00 |  5 |
 | OO Design Using Java    | James Nino, Frederick Hosch   | 30.00 |  6 |
 | Objects First with Java | David Barnes, Michael Kolling | 29.50 |  4 |
+
+**\* CORRECTION:** originally book 3 was `Introduction to Cobol` but for consistency this has been amended to `Intro to Cobol`. Please update your submission accordingly. 
 
 **Hint**
 
