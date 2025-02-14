@@ -721,7 +721,9 @@ String searchFor = "making software";
 System.out.println("Search for title:'" + searchFor + "' in title...");
 ```
 
-Add code that searches the array for books with a title that matches the search string. If the search term is found it should print the details of the book (using the `toString` method), and decrease the stock quantity of that book by 1.
+**\* CORRECTION:** The section below was updated to remove the requirement to print the book details. 
+
+Add code that searches the array for books with a title that matches the search string. If the search term is found it should <s>print the details of the book (using the `toString` method), and</s> decrease the stock quantity of that book by 1.
 
 Recall that for comparing string objects we should use the `equals()` method rather than equality operator `==`.
 
@@ -739,8 +741,9 @@ Use the following code to define a variable storing the term that will be used f
 String removeAll = "cobol";
 System.out.println("Removing all books with term '" + removeAll + "' in title..."); 
 ```
+**\* CORRECTION:** The section below was updated to remove the requirement to print the rows for removal. 
 
-Next add code that searches the stock level array for books containing this term in the title. It should print the stock level rows for the books identified (so they can be removed) and delete them from the stock list. 
+Next add code that searches the stock level array for books containing this term in the title. It should <s>print the stock level rows for the books identified (so they can be removed) and</s> delete these items from the stock list. 
 
 Hint. In addition to the `.equals()` method the `String` class has a `.contains()` method which can be used to determine if a string contains a given substring e.g.
 
