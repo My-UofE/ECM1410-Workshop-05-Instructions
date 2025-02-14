@@ -708,7 +708,7 @@ Note the table uses field sizes of 23, 28, 6 and 3 and do not need to be calcula
 | Objects First with Java | David Barnes, Michael Kolling |  29.50 | 004 |
 ```
 
-**CHALLENGE** When you finish the other tasks come back and try to make this table dynamically adapt its column widths to accomodate the entries so they would fit the content exactly i.e. width would be the length of the longest entry plus a space at each side. (optional - not for credit).
+**CHALLENGE** When you finish the other tasks come back and try to make this table dynamically adapt its column widths to accomodate the book title and author columns so they would fit the content exactly i.e. width would be the length of the longest entry plus a space at each side. (optional - not for credit).
 
 **TASK 4.4**
 
