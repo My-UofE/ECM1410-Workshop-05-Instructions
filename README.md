@@ -721,7 +721,10 @@ String searchFor = "making software";
 System.out.println("Search for term(s):'" + searchFor + "' in title...");
 ```
 
-**\* CORRECTION:** The section below was updated to remove the requirement to print the book details. 
+**\* CORRECTIONS:** 
+
+ - In the code above I made a minor consistency change to `Search for term(s):` where it originally it stated `title`.
+ - I have updated the section below to remove the requirement to print the book details (as we can see the update when we reprint the table). 
 
 Add code that searches the array for books with a title that matches the search string. If the search term is found it should <s>print the details of the book (using the `toString` method), and</s> decrease the stock quantity of that book by 1.
 
