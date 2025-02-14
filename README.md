@@ -718,7 +718,7 @@ Add the following line of code after displaying the `ArrayList` as above to set 
 
 ```java
 String searchFor = "making software";
-System.out.println("Search for title:'" + searchFor + "' in title...");
+System.out.println("Search for term(s):'" + searchFor + "' in title...");
 ```
 
 **\* CORRECTION:** The section below was updated to remove the requirement to print the book details. 
