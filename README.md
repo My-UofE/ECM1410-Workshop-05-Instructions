@@ -656,12 +656,12 @@ You can leave the author email addresses empty, and the gender codes as `'u'` i.
 |-------------------------|-------------------------------|------:|---:|
 | Data Mining Handbook    | Robert Nisbet                 | 27.95 | 10 |
 | Mastering COBOL         | Roger Hutty                   |  4.95 | 10 |
-| Intro to Cobol          | Paul Murrill                  |  7.35 |  4 |
+| Intro to COBOL          | Paul Murrill                  |  7.35 |  4 |
 | Making Software         | Andy Oram                     | 35.00 |  5 |
 | OO Design Using Java    | James Nino, Frederick Hosch   | 30.00 |  6 |
 | Objects First with Java | David Barnes, Michael Kolling | 29.50 |  4 |
 
-**\* CORRECTION:** originally book 3 was `Introduction to Cobol` but for consistency this has been amended to `Intro to Cobol`. Please update your submission accordingly. 
+**\* CORRECTION:** originally book 3 was `Introduction to Cobol` but for consistency this has been amended to `Intro to COBOL`. Please update your submission accordingly. 
 
 **Hint**
 
