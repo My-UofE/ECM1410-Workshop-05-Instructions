@@ -1,5 +1,11 @@
 # ECM1410-Workshop-05-Instructions
 
+**UPDATE 17th Feb**
+
+If you are not sure why your code does not pass the tests please check this file: [Expected_Outputs.pdf](https://github.com/My-UofE/ECM1410-Workshop-05-Instructions/blob/main/Expected_Outputs.pdf)
+
+It shows the output that should be produced by the different programs you have written. 
+
 **UPDATE 12th Feb** 
 
 You can add a test script to your repository by running the following command in your CodeSpace terminal:
