@@ -1,5 +1,25 @@
 # ECM1410-Workshop-05-Instructions
 
+**UPDATE 28th Feb**
+
+The grading script can now be found. This runs the 5 tests provides, then reruns some additiona testing to check e.g. your code works with different outputs, and checks more closely that you have followed the instructions. In your codespace you can download the script using command:
+
+```bash
+curl https://raw.githubusercontent.com/My-UofE/ECM1410-Workshop-05-Instructions/refs/heads/main/grading_ecm1410_workshop.sh -o ./tests/grading_ecm1410_workshop.sh
+```
+
+The run the script using 
+
+```bash
+bash ./tests/grading_ecm1410_workshop.sh
+```
+
+It will produce a markdown file called: `grading_report_workshop5.md` which you can view in the CodeSpaces (to see the colours select to open a preview) one reason this is a little late is that I have worked to improve the output so that you can clearly see where your submission and the expected answers differ.
+
+The overall grade is your mark over the 12 tests. e.g. 6/12 means you scored 50% for this assignment.
+
+The code I wrote does make some assumptions (to edit parts of your code) so that the additional tests run - it is entirely possible that some students repositories for some reason fail the tests even if they do conform to the instructions. If you think this might apply to you, please email me (Phil) and I will investigate (and I can correct the grading/bug fix my test code if required).
+
 **UPDATE 17th Feb**
 
 If you are not sure why your code does not pass the tests please check this file: [Expected_Outputs.pdf](https://github.com/My-UofE/ECM1410-Workshop-05-Instructions/blob/main/Expected_Outputs.pdf)
