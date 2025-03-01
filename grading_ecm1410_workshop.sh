@@ -1,9 +1,14 @@
 #!/bin/bash
 
-if [[ $# -eq  0 ]]; then
+if ! aha -v 2>&1 >/dev/null
+then
+    aha=cat
+fi
+
+if [ "$1" == "save_to_md" ]; then 
    echo "## ECM1410 Workshop 5" > grading_report_workshop5.md
    echo "#### Result of grading script" >> grading_report_workshop5.md
-   bash "${BASH_SOURCE[0]}" save_to_md | aha |  tail -n +10 | sed '$d' | sed '$d'  >> grading_report_workshop5.md
+   bash "${BASH_SOURCE[0]}" | aha |  tail -n +10 | sed '$d' | sed '$d'  >> grading_report_workshop5.md
    exit 0
 fi
 
@@ -471,8 +476,8 @@ echo t15 Testing BookApp tests at least 6 methods in Book class
 X=$(< ./tests/t17BookAppTest.out)
 if [ "$X" -gt "5" ]; then
     echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out
-else
-    echo "BOOKAPP TESTED FEWER THAN 6 BOOK METHODS" > ./tests/t15BookAppTest.out
+else:
+    echo "BOOKAPP TESTED LESS THAN 6 ( $X / 9 ) BOOK METHODS" > ./tests/t15BookAppTest.out
 fi
 
 echo t17 Testing BookApp tests at ALL methods in Book class
