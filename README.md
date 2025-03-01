@@ -1,6 +1,6 @@
 # ECM1410-Workshop-05-Instructions
 
-**UPDATE 28th Feb**
+**UPDATE 1st March (fixed grading script to run on codespaces - please redownload and run)**
 
 The grading script can now be found. This runs the 5 tests provided earlier plus 7 additional tests to check your code works correctly for different inputs, and checks more closely that you have followed the instructions. 
 
