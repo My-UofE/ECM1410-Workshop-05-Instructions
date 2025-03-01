@@ -387,6 +387,14 @@ else
     t04AuthorApp=FAILED_TO_RUN
 fi
 
+echo t05 Testing Book class using BookShopAppPWL testing code 
+java -cp tmpdir BookAppPWL > ./tests/t05BookAppPWL.out
+if [[ $? -eq 0 ]]; then
+    echo "BookShopAppPWL: COMPILED"
+else
+    echo "BookShopAppPWL: FAILED_TO_COMPILE"
+fi
+
 echo t06 Testing BookShopApp output is in line with instructions
 java -cp tmpdir BookShopApp > ./tests/t06BookShopApp.out
 if [[ $? -eq 0 ]]; then
@@ -484,13 +492,7 @@ echo t17 Testing BookApp tests at ALL methods in Book class
 X=$(< ./tests/t17BookAppTest.out)
 echo "BOOKAPP TESTED $X BOOK METHODS" > ./tests/t17BookAppTest.out
 
-echo t05 Testing Book class using BookShopAppPWL testing code 
-java -cp tmpdir BookAppPWL > ./tests/t05BookAppPWL.out
-if [[ $? -eq 0 ]]; then
-    echo "BookShopAppPWL: COMPILED"
-else
-    echo "BookShopAppPWL: FAILED_TO_COMPILE"
-fi
+
 
 ###############################
 
