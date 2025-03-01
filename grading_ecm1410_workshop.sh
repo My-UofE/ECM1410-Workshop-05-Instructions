@@ -347,7 +347,7 @@ echo
 echo "*************************************"
 echo "* PHASE 1 TESTING SUBMISSION CODE"
 echo "*************************************"
-echo TESTS: t01 t02 t03 t04 t06
+echo TESTS: t01 t02 t03 t04 t05 t06
 echo
 
 echo t01 Testing CopyArrayApp using args: 1 1 2 3 4 4 
@@ -430,7 +430,7 @@ echo
 echo "*********************************************"
 echo "* PHASE 2 RUNNING EXTRA TESTS FOR GRADING  "
 echo "*********************************************"
-echo TESTS t05 t11 t13 t14 t15 t16 t17
+echo TESTS t11 t13 t14 t15 t16 t17
 echo 
 
 rm -f ./tmpdir/*.*
