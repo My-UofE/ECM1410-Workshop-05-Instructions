@@ -325,6 +325,7 @@ cp BookShopApp.java ./tmpdir/.
 cp CopyArrayApp.java ./tmpdir/.
 cp PassByValueApp.java ./tmpdir/.
 cp StringFormatApp.java ./tmpdir/.
+echo "$BookAppPWL" > ./tmpdir/BookAppPWL.java
 
 echo
 echo "*************************************"
@@ -436,7 +437,6 @@ echo
 rm -f ./tmpdir/*.*
 echo "$Author" > ./tmpdir/Author.java
 echo "$Book" > ./tmpdir/Book.java
-echo "$BookAppPWL" > ./tmpdir/BookAppPWL.java
 
 tac BookApp.java | sed '1h;1!H;$!d;x;s/;/;\nBook.checkCalls();/'  | tac | sed 's/BookApp/BookAppTest/g' > ./tmpdir/BookAppTest.java
 sed 's/making software/Data Mining Handbook/g' BookShopApp.java | sed 's/"cobol";/"software";/g' | sed 's/BookShopApp/BookShopAppTest/g' > ./tmpdir/BookShopAppTest.java
