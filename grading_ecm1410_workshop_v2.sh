@@ -215,16 +215,16 @@ gender is: m
 EOM
 
 read -r -d '' t05BookAppPWL << EOM
-Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=email,gender=m],Author[name=Alexander Armstrong,email=email,gender=m]},price=13.99,qty=12]
+Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=noone@nowhere.com,gender=m],Author[name=Alexander Armstrong,email=armstrong@classicfm.com,gender=m]},price=13.99,qty=12]
 name: The Pointless Book
 author names: Richard Osman,Alexander Armstrong
 price: 13.99
 qty: 0
-Author[name=Richard Osman,email=email,gender=m]
-Author[name=Alexander Armstrong,email=email,gender=m]
+Author[name=Richard Osman,email=noone@nowhere.com,gender=m]
+Author[name=Alexander Armstrong,email=armstrong@classicfm.com,gender=m]
 getAuthors: 
-Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=email,gender=m],Author[name=Alexander Armstrong,email=email,gender=m]},price=14.99,qty=0]
-Book[name=Java for Dummies,authors={Author[name=Pip Jones,email=email,gender=u],Author[name=Bessie Carter,email=email,gender=f]},price=19.99,qty=99]
+Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=noone@nowhere.com,gender=m],Author[name=Alexander Armstrong,email=armstrong@classicfm.com,gender=m]},price=14.99,qty=0]
+Book[name=Java for Dummies,authors={Author[name=Pip Jones,email=pjones@java.org,gender=u],Author[name=Bessie Carter,email=b.carter@java.org,gender=f]},price=19.99,qty=99]
 EOM
 
 read -r -d '' t06BookShopApp << EOM
