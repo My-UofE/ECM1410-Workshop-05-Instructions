@@ -301,13 +301,13 @@ Search for term(s) 'Data Mining Handbook' in title...
 | Making Software         | Andy Oram                    |  35.00 | 005 |
 | OO Design Using Java    | James Nino,Frederick Hosch   |  30.00 | 006 |
 | Objects First with Java | David Barnes,Michael Kolling |  29.50 | 004 |
-Removing all books with term 'first' in title...
+Removing all books with term 'software' in title...
 Removed 1 books
 | Data Mining Handbook    | Robert Nisbet                |  27.95 | 009 |
 | Mastering COBOL         | Roger Hutty                  |   4.95 | 010 |
 | Intro to COBOL          | Paul Murrill                 |   7.35 | 004 |
-| Making Software         | Andy Oram                    |  35.00 | 005 |
 | OO Design Using Java    | James Nino,Frederick Hosch   |  30.00 | 006 |
+| Objects First with Java | David Barnes,Michael Kolling |  29.50 | 004 |
 EOM
 
 
@@ -439,7 +439,7 @@ echo "$Book" > ./tmpdir/Book.java
 echo "$BookAppPWL" > ./tmpdir/BookAppPWL.java
 
 tac BookApp.java | sed '1h;1!H;$!d;x;s/;/;\nBook.checkCalls();/'  | tac | sed 's/BookApp/BookAppTest/g' > ./tmpdir/BookAppTest.java
-sed 's/making software/Data Mining Handbook/g' BookShopApp.java | sed 's/"cobol";/"first";/g' | sed 's/BookShopApp/BookShopAppTest/g' > ./tmpdir/BookShopAppTest.java
+sed 's/making software/Data Mining Handbook/g' BookShopApp.java | sed 's/"cobol";/"software";/g' | sed 's/BookShopApp/BookShopAppTest/g' > ./tmpdir/BookShopAppTest.java
 cp BookShopApp.java ./tmpdir/.
 cp AuthorApp.java ./tmpdir/.
 
