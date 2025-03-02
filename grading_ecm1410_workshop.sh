@@ -482,7 +482,7 @@ fi
 
 echo t15 Testing BookApp tests at least 6 methods in Book class 
 X=$(< ./tests/t17BookAppTest.out)
-if [ "$X" -gt "5" ]; then
+if [[ "$X" -gt "5" ]]; then
     echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out
 else:
     echo "BOOKAPP TESTED LESS THAN 6 ( $X / 9 ) BOOK METHODS" > ./tests/t15BookAppTest.out
