@@ -16,11 +16,9 @@ The run the script using:
 bash ./tests/grading_ecm1410_workshop.sh
 ```
 
-It will produce a markdown file called: `grading_report_workshop5.md` which you can view in the CodeSpaces - to view this properly select to open a preview window.  One reason the grading is is a little slower this week is that I have worked to improve the output so that you can clearly see where your submission and the expected answers differ.
-
 The overall grade is your mark over the 12 tests. e.g. 6/12 means you scored 50% for this assignment.
 
-The code I wrote does make some assumptions (to edit parts of your code) so that the additional tests run - it is entirely possible that some students repositories for some reason fail the tests even if they do conform to the instructions. If you think this might apply to you, please email me (Phil) and I will investigate (and I can correct the grading/bug fix my test code if required). Additionally whe I grade your repositories I will be working with those as they were uploaded on GitHub as of the workshop deadline - so if you see a discrepancy with ELE it may be that some work you did was not uploaded.
+The code I wrote does make some assumptions (to edit parts of your code) so that the additional tests run - **it is entirely possible that some students repositories for some reason fail the tests even if they do conform to the instructions and that I need to adjust/correct the tests to grade things correctly**. If you think this might apply to you, please email me (Phil) and I will investigate (and I can correct the grading/bug fix my test code if required). Additionally when I grade your repositories I will be working with those as they were uploaded on GitHub as of the workshop deadline - so if you see a discrepancy with your result via the final ELE grade it probably means you did not manage to commit and push all the work you did.
 
 **UPDATE 17th Feb**
 
