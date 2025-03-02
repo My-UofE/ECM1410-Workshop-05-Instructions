@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 if ! aha -v 2>&1 >/dev/null
@@ -214,16 +215,16 @@ gender is: m
 EOM
 
 read -r -d '' t05BookAppPWL << EOM
-Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=email,gender=m],Author[name=Alexander Armstrong,email=email,gender=m]},price=13.99,qty=12]
+Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=noone@nowhere.com,gender=m],Author[name=Alexander Armstrong,email=armstrong@classicfm.com,gender=m]},price=13.99,qty=12]
 name: The Pointless Book
 author names: Richard Osman,Alexander Armstrong
 price: 13.99
 qty: 0
-Author[name=Richard Osman,email=email,gender=m]
-Author[name=Alexander Armstrong,email=email,gender=m]
+Author[name=Richard Osman,email=noone@nowhere.com,gender=m]
+Author[name=Alexander Armstrong,email=armstrong@classicfm.com,gender=m]
 getAuthors: 
-Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=email,gender=m],Author[name=Alexander Armstrong,email=email,gender=m]},price=14.99,qty=0]
-Book[name=Java for Dummies,authors={Author[name=Pip Jones,email=email,gender=u],Author[name=Bessie Carter,email=email,gender=f]},price=19.99,qty=99]
+Book[name=The Pointless Book,authors={Author[name=Richard Osman,email=noone@nowhere.com,gender=m],Author[name=Alexander Armstrong,email=armstrong@classicfm.com,gender=m]},price=14.99,qty=0]
+Book[name=Java for Dummies,authors={Author[name=Pip Jones,email=pjones@java.org,gender=u],Author[name=Bessie Carter,email=b.carter@java.org,gender=f]},price=19.99,qty=99]
 EOM
 
 read -r -d '' t06BookShopApp << EOM
@@ -476,18 +477,20 @@ echo t17 Testing BookApp tests every method in Book class
 java -cp tmpdir BookAppTest | grep -c TESTED_OK > ./tests/t17BookAppTest.out
 if [[ $? -eq 0 ]]; then
     echo "BookAppTest: COMPILED"
-else
+else 
     echo "BookAppTest: FAILED_TO_COMPILE"
 fi
 
 echo t15 Testing BookApp tests at least 6 methods in Book class 
 X=$(< ./tests/t17BookAppTest.out)
-if [[ "$X" -gt "5" ]]; then
-    echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out
-else:
-    echo "BOOKAPP TESTED LESS THAN 6 ( $X / 9 ) BOOK METHODS" > ./tests/t15BookAppTest.out
-fi
 
+if [[ $X -gt 5 ]]; then
+    echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out;
+    echo t05 BookApp tests  $X / 9  of Book class method passed
+else
+    echo "BOOKAPP TESTED LESS THAN 6 ( $X / 9 ) BOOK METHODS" > ./tests/t15BookAppTest.out;
+    echo t05 BookApp tests  $X / 9  of Book class method but 6 needed to pass
+fi
 echo t17 Testing BookApp tests at ALL methods in Book class
 X=$(< ./tests/t17BookAppTest.out)
 echo "BOOKAPP TESTED $X BOOK METHODS" > ./tests/t17BookAppTest.out
