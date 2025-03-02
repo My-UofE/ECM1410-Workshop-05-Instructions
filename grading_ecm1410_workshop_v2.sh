@@ -477,18 +477,20 @@ echo t17 Testing BookApp tests every method in Book class
 java -cp tmpdir BookAppTest | grep -c TESTED_OK > ./tests/t17BookAppTest.out
 if [[ $? -eq 0 ]]; then
     echo "BookAppTest: COMPILED"
-else
+else 
     echo "BookAppTest: FAILED_TO_COMPILE"
 fi
 
 echo t15 Testing BookApp tests at least 6 methods in Book class 
 X=$(< ./tests/t17BookAppTest.out)
-if [[ "$X" -gt "5" ]]; then
-    echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out
-else:
-    echo "BOOKAPP TESTED LESS THAN 6 ( $X / 9 ) BOOK METHODS" > ./tests/t15BookAppTest.out
-fi
 
+if [[ $X -gt 5 ]]; then
+    echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out;
+    echo t05 BookApp tests  $X / 9  of Book class method passed
+else
+    echo "BOOKAPP TESTED LESS THAN 6 ( $X / 9 ) BOOK METHODS" > ./tests/t15BookAppTest.out;
+    echo t05 BookApp tests  $X / 9  of Book class method but 6 needed to pass
+fi
 echo t17 Testing BookApp tests at ALL methods in Book class
 X=$(< ./tests/t17BookAppTest.out)
 echo "BOOKAPP TESTED $X BOOK METHODS" > ./tests/t17BookAppTest.out
