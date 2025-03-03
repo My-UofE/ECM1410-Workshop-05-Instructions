@@ -83,7 +83,8 @@ public class Author {
 }
 EOM
 
-read -r -d '' Book << EOM
+read -r -d '' Book2 << EOM
+import java.util.stream.*;
 public class Book {
     private String name;
     private Author[] authors;
@@ -99,7 +100,7 @@ public class Book {
     public static String cgetQty = "getQty NOT tested by BookApp";
     public static String ctoString = "toString NOT tested by BookApp";
     public static String cgetAuthorNames = "getAuthorNames NOT tested by BookApp";
-
+    public static int[] cm = new int[9];
     public Book(String name, 
                   Author[] authors,
                   double price,
@@ -109,6 +110,8 @@ public class Book {
         this.price = price;
         this.qty = qty;
         cbook = "Book TESTED_OK by BookApp";
+	cm[0] = 1;
+    reportmethods();
         }
 
     public Book(String name, 
@@ -116,41 +119,57 @@ public class Book {
                   double price){
         this(name, authors, price, 0);
         cbook = "Book TESTED_OK by BookApp";
+	cm[0] = 1;
+    reportmethods();
     }
 
     public String getName(){
         cgetName = "getName TESTED_OK by BookApp";
+	cm[1] = 1;
+    reportmethods();
         return this.name;
         
     }
 
     public Author[] getAuthors(){
         cgetAuthors = "getAuthors TESTED_OK by BookApp";
+	cm[2] = 1;
+    reportmethods();
         return this.authors;
     }
 
     public double getPrice(){
         cgetPrice = "getPrice TESTED_OK by BookApp";
+	cm[3] = 1;
+    reportmethods();
         return this.price;
     }
 
     public void setPrice(double newPrice){
         csetPrice = "setPrice TESTED_OK by BookApp";
+	cm[4] = 1;
+    reportmethods();
         this.price = newPrice;
     }
 
     public void setQty(int newQty){
         csetQty = "setQty TESTED_OK by BookApp";
+	cm[5] = 1;
+    reportmethods();
         this.qty = newQty;
     }
 
     public int getQty(){
         cgetQty = "getQty TESTED_OK by BookApp";
+	cm[6] = 1;
+    reportmethods();
         return this.qty;
     }
 
     public String toString(){
         ctoString = "toString TESTED_OK by BookApp";
+	cm[7] = 1;
+    reportmethods();
         String authorString="";
         for (int i = 0; i < this.authors.length; i++) {
             authorString += authors[i].toString();
@@ -165,6 +184,8 @@ public class Book {
    
     public String getAuthorNames(){
         cgetAuthorNames = "getAuthorNames TESTED_OK by BookApp";
+	cm[8] = 1;
+
         String authorNames="";
         for (int i = 0; i < this.authors.length; i++) {
             authorNames += authors[i].getName();
@@ -172,10 +193,13 @@ public class Book {
                 authorNames += ",";
             }
           }
+          reportmethods();
         return authorNames;
     }
 
-    public static void checkCalls(){
+    public static void reportmethods(){
+        System.out.println("METHODS CHECKED: " + IntStream.of(cm).sum() );
+        /*
         System.out.println("Book.java calls:");
         System.out.println(cbook);
         System.out.println(cgetName);
@@ -186,6 +210,127 @@ public class Book {
         System.out.println(cgetQty);
         System.out.println(ctoString);
         System.out.println(cgetAuthorNames);
+        */
+        return;
+    }
+}
+EOM
+
+read -r -d '' Book << EOM
+import java.util.stream.*;
+public class Book {
+    private String name;
+    private Author[] authors;
+    private double price;
+    private int qty;
+    
+    public static String cbook = "Book NOT tested by BookApp";
+    public static String cgetName = "getName NOT tested by BookApp";
+    public static String cgetAuthors = "getAuthors NOT tested by BookApp";
+    public static String cgetPrice = "getPrice NOT tested by BookApp";
+    public static String csetPrice = "setPrice NOT tested by BookApp";
+    public static String csetQty = "setQty NOT tested by BookApp";
+    public static String cgetQty = "getQty NOT tested by BookApp";
+    public static String ctoString = "toString NOT tested by BookApp";
+    public static String cgetAuthorNames = "getAuthorNames NOT tested by BookApp";
+    public static int[] cm = new int[9];
+    public Book(String name, 
+                  Author[] authors,
+                  double price,
+                  int qty){
+        this.name = name;
+        this.authors = authors;
+        this.price = price;
+        this.qty = qty;
+        cbook = "Book TESTED_OK by BookApp";
+	cm[0] = 1;
+    reportmethods();
+        }
+
+    public Book(String name, 
+                  Author[] authors,
+                  double price){
+        this(name, authors, price, 0);
+        cbook = "Book TESTED_OK by BookApp";
+	cm[0] = 1;
+    reportmethods();
+    }
+
+    public String getName(){
+        cgetName = "getName TESTED_OK by BookApp";
+	cm[1] = 1;
+    reportmethods();
+        return this.name;
+        
+    }
+
+    public Author[] getAuthors(){
+        cgetAuthors = "getAuthors TESTED_OK by BookApp";
+	cm[2] = 1;
+    reportmethods();
+        return this.authors;
+    }
+
+    public double getPrice(){
+        cgetPrice = "getPrice TESTED_OK by BookApp";
+	cm[3] = 1;
+    reportmethods();
+        return this.price;
+    }
+
+    public void setPrice(double newPrice){
+        csetPrice = "setPrice TESTED_OK by BookApp";
+	cm[4] = 1;
+    reportmethods();
+        this.price = newPrice;
+    }
+
+    public void setQty(int newQty){
+        csetQty = "setQty TESTED_OK by BookApp";
+	cm[5] = 1;
+    reportmethods();
+        this.qty = newQty;
+    }
+
+    public int getQty(){
+        cgetQty = "getQty TESTED_OK by BookApp";
+	cm[6] = 1;
+    reportmethods();
+        return this.qty;
+    }
+
+    public String toString(){
+        ctoString = "toString TESTED_OK by BookApp";
+	cm[7] = 1;
+    reportmethods();
+        String authorString="";
+        for (int i = 0; i < this.authors.length; i++) {
+            authorString += authors[i].toString();
+            if (i<this.authors.length-1){
+                authorString += ",";
+            }
+          }
+        String result = String.format("Book[name=%s,authors={%s},price=%.2f,qty=%d]", 
+        this.name, authorString, this.price, this.qty);
+        return result;
+    }
+   
+    public String getAuthorNames(){
+        cgetAuthorNames = "getAuthorNames TESTED_OK by BookApp";
+	cm[8] = 1;
+
+        String authorNames="";
+        for (int i = 0; i < this.authors.length; i++) {
+            authorNames += authors[i].getName();
+            if (i<this.authors.length-1){
+                authorNames += ",";
+            }
+          }
+          reportmethods();
+        return authorNames;
+    }
+
+    public static void reportmethods(){
         return;
     }
 }
@@ -432,14 +577,15 @@ echo
 echo "*********************************************"
 echo "* PHASE 2 RUNNING EXTRA TESTS FOR GRADING  "
 echo "*********************************************"
-echo TESTS t11 t13 t14 t15 t16 t17
+echo TESTS t11 t13 t14 t16 
 echo 
 
 rm -f ./tmpdir/*.*
 echo "$Author" > ./tmpdir/Author.java
 echo "$Book" > ./tmpdir/Book.java
 
-tac BookApp.java | sed '1h;1!H;$!d;x;s/;/;\nBook.checkCalls();/'  | tac | sed 's/BookApp/BookAppTest/g' > ./tmpdir/BookAppTest.java
+# tac BookApp.java | sed '1h;1!H;$!d;x;s/;/;\nBook.checkCalls();/'  | tac | sed 's/BookApp/BookAppTest/g' > ./tmpdir/BookAppTest.java
+cat BookApp.java | sed 's/BookApp/BookAppTest/g' > ./tmpdir/BookAppTest.java
 sed 's/making software/Data Mining Handbook/g' BookShopApp.java | sed 's/"cobol";/"software";/g' | sed 's/BookShopApp/BookShopAppTest/g' > ./tmpdir/BookShopAppTest.java
 cp BookShopApp.java ./tmpdir/.
 cp AuthorApp.java ./tmpdir/.
@@ -473,8 +619,28 @@ else
     echo "BookShopAppTest: FAILED_TO_COMPILE"
 fi
 
+echo
+echo "*************************************"
+echo "* PHASE 3 TESTING BookApp"
+echo "*************************************"
+echo t15 t17
+echo 
+
+echo "$Book2" > ./tmpdir/Book.java
+
+# Iterate over all Java files in the directory
+for java_file in ./tmpdir/*.java; do
+    # Compile the Java file 
+    javac -cp tmpdir "$java_file"
+    if [[ $? -eq 0 ]]; then
+        echo "${java_file:9}: COMPILED"
+    else
+        echo "${java_file:9}: FAILED_TO_COMPILE"
+    fi
+done
+
 echo t17 Testing BookApp tests every method in Book class 
-java -cp tmpdir BookAppTest | grep -c TESTED_OK > ./tests/t17BookAppTest.out
+java -cp tmpdir BookAppTest | tac | grep "METHODS CHECKED" | head -n 1 | sed 's/METHODS CHECKED: //g' > ./tests/t17BookAppTest.out
 if [[ $? -eq 0 ]]; then
     echo "BookAppTest: COMPILED"
 else 
@@ -483,7 +649,7 @@ fi
 
 echo t15 Testing BookApp tests at least 6 methods in Book class 
 X=$(< ./tests/t17BookAppTest.out)
-
+cp ./tests/t17BookAppTest.out ./tests/t17BookAppTest.out.bak
 if [[ $X -gt 5 ]]; then
     echo "BOOKAPP AT LEAST TESTED 6 BOOK METHODS" > ./tests/t15BookAppTest.out;
     echo t05 BookApp tests  $X / 9  of Book class method passed
@@ -501,7 +667,7 @@ echo "BOOKAPP TESTED $X BOOK METHODS" > ./tests/t17BookAppTest.out
 
 echo
 echo "****************************************************"
-echo "* PHASE 3 COMPARING SUBMISSION VS EXPECTED OUTPUTS"
+echo "* PHASE 4 COMPARING SUBMISSION VS EXPECTED OUTPUTS"
 echo "****************************************************"
 echo TESTS t01 t02 t03 t04 t05 t06 t11 t13 t14 t15 t16 t17
 echo 
